@@ -1,87 +1,83 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <title>Luxury Vibe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxora IL</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      background: #000;
-      font-family: Arial, sans-serif;
-    }
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#d4af37;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+.box{
+    max-width:400px;
+}
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.loading{
+    font-size:22px;
+    letter-spacing:3px;
+}
+.dot{
+    animation: blink 1.4s infinite both;
+}
+.dot:nth-child(2){ animation-delay: .2s; }
+.dot:nth-child(3){ animation-delay: .4s; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 15px;
-      max-width: 1200px;
-      margin: auto;
-    }
+@keyframes blink {
+  0% { opacity: .2; }
+  20% { opacity: 1; }
+  100% { opacity: .2; }
+}
+</style>
 
-    .grid a img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      transition: transform 0.2s ease;
-    }
+<script>
+function redirectUser(){
+    var url = "https://luxora-il.com/";
+    var ua = navigator.userAgent || "";
 
-    .grid a:hover img {
-      transform: scale(1.03);
+    // فحص إذا كان داخل TikTok
+    if (ua.indexOf("TikTok") !== -1) {
+
+        // محاولة فتح في متصفح خارجي
+        var newWindow = window.open(url, "_blank");
+
+        // إذا فشل الفتح (بعض الأجهزة تمنعه)
+        setTimeout(function(){
+            window.location.replace(url);
+        }, 300);
+
+    } else {
+        window.location.replace(url);
     }
-  </style>
+}
+
+// نصف ثانية قبل التحويل
+setTimeout(redirectUser, 500);
+</script>
+
 </head>
 <body>
 
-<div class="grid">
-
-  <!-- WhatsApp -->
-  <a href="https://api.whatsapp.com/send/?phone=972534681116&text&type=phone_number&app_absent=0" target="_blank">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68frj000504jy3g0l6i1g.png" alt="WhatsApp">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmesjepgq001ll20472umc4xg">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fs5000504lk47ehgkaa.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmetqssiy0006jv0417yta3nr">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fsb000d04l937r16ugz.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmev8vpye0000l5044a30x5hu">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68frv000704l23ydg4lbq.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf34pqmr0009la04ut6mwion">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68frv000604jyc0gr429s.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf5xvbl30007jr04dad36p8h">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fs3000c04l8ed4o1tay.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf5yf9pe000yl904aofpzglb">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fw0000804jy84bx9lt3.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf5z5sf1000hky04nmov4oro">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fsb000a04jsau69fek9.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf5zvsdv000iky0483der9gm">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fs7000304jpee5y7ly8.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmj3gluxb0014l7045ljk7pnp">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fs9000404i8cp19cpzm.png" alt="">
-  </a>
-
-  <a href="https://luxora-il.com/he/c/cmf487lwd000njx042ttj5skb">
-    <img src="https://storage.googleapis.com/takeapp/media/cmlh68fta000704jyfx9d18ie.png" alt="">
-  </a>
-
+<div class="box">
+    <div class="logo">LUXORA IL</div>
+    <div>מעבירים אותך לחנות היוקרה שלנו</div>
+    <div class="loading">
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+    </div>
 </div>
 
 </body>
